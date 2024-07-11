@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>Charu</span><br>Chandra</h1>
+            <p>Software Engineer</p>
+            
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Software Engineer with a passion for coding and a strong foundation in Computer concepts.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Coading</span><br> C++ language</li>
+                        <li><span>Frontend web Development</span><br>HTML & CSS language</li>
+                        <li><span>Databases & Visualisation Tool</span><br>MySQL language & PowerBI</li>
+                        <li><span>Computer Fundamentals</span><br>OOPs,Computer Netork,OS & DBMS </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024(July) - Current</span><br>Software Engineer at Bizacuity</li>
+                        <li><span>2024(January) - 2024(March)</span><br>Data Analyst Intern at Shadowfax Technology</li>
+                        <li><span>2023(March) - 2023(June)</span><br>Frontend Intern at BucketList</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2017</span><br>Class 10th at Stella Maris Convent School Sultanpur</li>
+                        <li><span>2017-2019</span><br>Class 12th from Stella Maris Convent School Sultanpur</li>
+                        <li><span>2020-2024</span><br>Engineering from MSRIT Bangalore.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- ---------services---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Frontend Development</h2>
+                <p>Frontend Development with the help of HTML & CSS</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>Database Visualisation</h2>
+                <p>Database Visualisation with the help of PowerBI Tool.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>Coading</h2>
+                <p>Coading in C++ language</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------portfolio------------ -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-phone-square-alt"></i>charuchandra7304@gmail.com</p>
+                <div class="social-icons">
+                   <ul>
+                    <div class="linkdin">
+                        <img src="linkdin.png" alt="">
+                    <li><a href="https://www.linkedin.com/in/charu-chandra-a20215252/">Linkdin</a></li>
+                </div>
+                     <div class="instagram">
+                        <img src="instagram.jpeg" alt="">
+                    <li><a href="https://www.instagram.com/charu_____7/">Instagram</a></li>
+                </div>
+                   </ul>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Charu Chandra <i class="fas fa-heart"></i> 
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = '< add you own link here >' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
